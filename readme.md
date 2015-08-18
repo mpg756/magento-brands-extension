@@ -1,4 +1,4 @@
-## Magento brends module
+## Magento brands module
 
 This module add brand to your product.
 
