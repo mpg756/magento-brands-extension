@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Test_Brands>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>0.0.2</version>
+        </Test_Brands>
+    </modules>
+</config>

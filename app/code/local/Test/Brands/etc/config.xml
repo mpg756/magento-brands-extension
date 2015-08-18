@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Test_Brands>
+            <version>0.0.2</version>
+        </Test_Brands>
+    </modules>
+    <global>
+        <blocks>
+            <test_brands>
+                <class>Test_Brands_Block</class>
+            </test_brands>
+        </blocks>
+
+        <helpers>
+            <test_brands>
+                <class>Test_Brands_Helper</class>
+            </test_brands>
+        </helpers>
+
+        <models>
+            <test_brands>
+                <class>Test_Brands_Model</class>
+                <resourceModel>test_brands_resource</resourceModel>
+            </test_brands>
+
+            <test_brands_resource>
+                <class>Test_Brands_Model_Resource</class>
+                <entities>
+                    <brand>
+                        <table>test_brands_brand</table>
+                    </brand>
+                </entities>
+            </test_brands_resource>
+        </models>
+
+
+        <resources>
+            <test_brands_setup>
+                <setup>
+                    <module>Test_Brands</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </test_brands_setup>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <test_brands_admin>
+                <use>admin</use>
+                <args>
+                    <module>Test_Brands_Adminhtml</module>
+                    <frontName>brands-admin</frontName>
+                </args>
+            </test_brands_admin>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <test_brands>
+                    <file>test_brands.xml</file>
+                </test_brands>
+            </updates>
+        </layout>
+    </adminhtml>
+        <frontend>
+        <layout>
+            <updates>
+                <test_brands>
+                    <file>test_brands.xml</file>
+                </test_brands>
+            </updates>
+        </layout>
+        <routers>
+            <test_brands>
+                <use>standard</use>
+                <args>
+                    <module>Test_Brands</module>
+                    <frontName>brand</frontName>
+                </args>
+            </test_brands>
+        </routers>
+    </frontend>
+</config>

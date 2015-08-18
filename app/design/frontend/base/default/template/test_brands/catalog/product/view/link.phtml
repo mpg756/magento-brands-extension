@@ -1,0 +1,8 @@
+<?php $brand = $this->getBrand(); ?>
+
+<?php if ($brand): ?>
+
+    <h3><?php echo $this->__('Brand'); ?></h3>
+    <img src="<?php echo  $brand->getImage()?>" alt="">
+    <p><a href="<?php echo $this->helper('test_brands/brand')->getBrandUrl($brand); ?>" title="<?php echo $this->escapeHtml($brand->getName()); ?>"><?php echo $brand->getName(); ?></a></p>
+<?php endif; ?>

@@ -1,0 +1,23 @@
+<?php $brand = $this->getCurrentBrand(); ?>
+<?php if ($brand): ?>
+
+    <h1><?php echo $brand->getName(); ?></h1>
+    <img src="<?php echo '/media' . DS .$brand->getImage() ?>" height="50px">
+    <p><a href="<?php echo $this->helper('test_brands/brand')->getBrandUrl($brand); ?>" title="<?php echo $this->escapeHtml($brand->getName()); ?>"><?php echo $brand->getName(); ?></a></p>
+    <?php echo $brand->getDescription(); ?>
+    <br/>
+    <a href="<?php echo $brand->getLink(); ?>"><?php echo $brand->getLink(); ?></a>
+
+    <?php $productCollection = $this->getProductCollection(); ?>
+    <?php if ($productCollection->count() > 0): ?>
+
+        <h2>Products</h2>
+        <ul>
+            <?php foreach ($productCollection as $_product): ?>
+                <li><a href="<?php echo $this->getUrl('catalog/product/view', array('id' => $_product->getId())); ?>" title="<?php echo $this->escapeHtml($_product->getName()); ?>"><?php echo $_product->getName(); ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+
+    <?php endif; ?>
+
+<?php endif; ?>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <brands translate="title" module="test_brands">
+            <title>Brands</title>
+            <sort_order>120</sort_order>
+            <depends>
+                <module>Test_Brands</module>
+            </depends>
+            <children>
+                <brand translate="title" module="test_brands">
+                    <title>Manage Brands</title>
+                    <sort_order>1</sort_order>
+                    <action>test_brands_admin/brand</action>
+                </brand>
+                <brand_add translate="title" module="test_brands">
+                    <title>Add Brand</title>
+                    <sort_order>2</sort_order>
+                    <action>test_brands_admin/brand/edit</action>
+                </brand_add>
+            </children>
+        </brands>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <test_brands translate="title" module="test_brands">
+                        <title>Brands</title>
+                        <sort_order>120</sort_order>
+                        <children translate="title" module="test_brands">
+                            <title>Manage Brands</title>
+                        </children>
+                    </test_brands>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

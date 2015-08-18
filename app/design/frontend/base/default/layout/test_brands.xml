@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout>
+
+    <test_brands_index_index>
+        <reference name="content">
+            <block type="test_brands/list" name="test.brands.list" template="test_brands/list.phtml" />
+        </reference>
+    </test_brands_index_index>
+
+    <test_brands_index_view>
+        <reference name="content">
+            <block type="test_brands/view" name="test.brands.view" template="test_brands/view.phtml" />
+        </reference>
+    </test_brands_index_view>
+
+    <catalog_product_view>
+        <reference name="product.info">
+            <block type="test_brands/catalog_product_view_link" name="catalog.product.view.other.link" as="other" template="test_brands/catalog/product/view/link.phtml"/>
+        </reference>
+    </catalog_product_view>
+
+</layout>
