@@ -13,4 +13,4 @@ Feachures:
 ## Installation
 1) Copy app folder to your project directory;
 
-2) Create brands folder in media folder.
+2) Create media/brands folder.
